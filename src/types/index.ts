@@ -3,15 +3,16 @@ export interface Announcement {
   text: string;
   priority: 'normal' | 'urgent' | 'emergency';
   timestamp: string;
-  isActive: boolean;
-  pushToLED: boolean;
-  pushToWhatsApp: boolean;
+  isActive?: boolean;
+  published?: boolean;
+  pushToLED?: boolean;
+  pushToWhatsApp?: boolean;
 }
 
 export interface Ritual {
   id: string;
   time: string;
-  period: string; // 'PRATAH KAALA', 'MADHYAHNA', etc.
+  period: string; // 'MORNING', 'AFTERNOON', 'EVENING', 'NIGHT', 'YATRA'
   title: string;
   description: string;
   venue: string;
@@ -36,12 +37,16 @@ export interface PrasadItem {
   availableCount: number;
   description: string;
   unit: string;
+  pickupCounter?: string;
+  pickupTiming?: string;
+  status?: 'available' | 'sold_out' | 'limited';
+  bookingLimitPerDevotee?: number;
 }
 
 export interface CrowdStatus {
   currentWaitMinutes: number;
-  gate1Status: string; // e.g. "Moving Smoothly"
-  gate2Status: string; // e.g. "5 Min Wait (Assisted)"
+  gate1Status: string;
+  gate2Status: string;
   crowdDensity: 'Low' | 'Moderate' | 'High' | 'Peak';
   lastUpdated: string;
   peakExpectedTime: string;
@@ -55,7 +60,7 @@ export interface LeaderboardEntry {
   matchesPlayed: number;
   matchesWon: number;
   points: number;
-  matchStatus: string; // '● Live Court 1', 'Final', 'Under Review'
+  matchStatus: string;
   rewardTier: string;
 }
 
@@ -73,6 +78,7 @@ export interface Competition {
   venue: string;
   jury: string;
   registeredCount: number;
+  status?: 'open' | 'closed' | 'in_progress';
 }
 
 export interface DonationRecord {
@@ -94,7 +100,7 @@ export interface HistoricalVaultItem {
   description: string;
   idolHeight: string;
   mandapamStyle: string;
-  headSculptor: string;
+  headSculptor?: string;
   imageUrl: string;
 }
 
@@ -113,7 +119,7 @@ export interface AchievementRecord {
   id: string;
   title: string;
   awardHonor: string;
-  year: string;
+  year: string | number;
   team: string;
   description: string;
   keyHighlight: string;
@@ -150,3 +156,90 @@ export interface MythStory {
   shlokaMeaning: string;
   imageUrl: string;
 }
+
+export interface FestivalConfig {
+  name: string;
+  tagline: string;
+  colonyName: string;
+  year: number;
+  dates: string;
+  tithi: string;
+  venue: string;
+  organizer: string;
+  establishedYear: number;
+  status: string;
+  contacts: {
+    helpline: string;
+    altPhone: string;
+    email: string;
+    whatsapp: string;
+  };
+  socials: {
+    youtube: string;
+    instagram: string;
+    facebook: string;
+  };
+  highlights: {
+    unbrokenYears: number;
+    annadanamMeals: string;
+    ecoClayCommitment: string;
+    expectedPilgrims: string;
+  };
+}
+
+export interface CameraStream {
+  id: string;
+  name: string;
+  label: string;
+  streamUrl: string;
+  badge: string;
+  status: 'active' | 'offline' | 'maintenance';
+  order: number;
+}
+
+export interface LiveDarshanConfig {
+  enabled: boolean;
+  templeState: string;
+  activeCameraId: string;
+  cameras: CameraStream[];
+}
+
+export interface BroadcastMessage {
+  id: string;
+  message: string;
+  priority: 'normal' | 'urgent' | 'emergency';
+  createdAt: string;
+  active: boolean;
+  targetChannels: string[];
+}
+
+export interface FestivalSettings {
+  festivalStatus: string;
+  maintenanceMode: boolean;
+  enableLiveDarshan: boolean;
+  enablePrasadBooking: boolean;
+  enableCompetitions: boolean;
+  enableSportsScoreboard: boolean;
+  enableAnnouncementsTicker: boolean;
+  enablePublicDonationAction: boolean;
+  aartiTimes: {
+    morning: string;
+    afternoon: string;
+    evening: string;
+  };
+  helpline: string;
+  emergencyAddress: string;
+}
+
+export interface FinanceSummary {
+  currency: string;
+  totalCollected: number;
+  verifiedCount: number;
+  summary: {
+    cashTotal: number;
+    upiTotal: number;
+    bankNeftTotal: number;
+  };
+  records: DonationRecord[];
+}
+

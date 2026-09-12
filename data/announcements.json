@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ann-1",
+    "text": "🪔 Maha Aarti starting in 15 mins at Main Sanctum. Devotees kindly gather in the Central Pradakshina mandapam.",
+    "priority": "urgent",
+    "timestamp": "Just now",
+    "published": true,
+    "pushToLED": true,
+    "pushToWhatsApp": true
+  },
+  {
+    "id": "ann-2",
+    "text": "🅿️ Parking status: Available at Gate 2 (West Enclosure). Free shuttle van operational for elders.",
+    "priority": "normal",
+    "timestamp": "5 mins ago",
+    "published": true,
+    "pushToLED": true,
+    "pushToWhatsApp": false
+  },
+  {
+    "id": "ann-3",
+    "text": "🍯 Laddu Prasadam counters open now at Mandapam West. Digital token counter active.",
+    "priority": "normal",
+    "timestamp": "12 mins ago",
+    "published": true,
+    "pushToLED": true,
+    "pushToWhatsApp": true
+  },
+  {
+    "id": "ann-4",
+    "text": "🕉️ Special Maha Ganapathi Sahasra Deepalankarana Seva begins at 7:30 PM tonight at Main Pandal.",
+    "priority": "normal",
+    "timestamp": "20 mins ago",
+    "published": true,
+    "pushToLED": true,
+    "pushToWhatsApp": true
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "tournamentTitle": "B.C. Colony Silver Jubilee Rural Sports Meet",
+  "venue": "Gram Panchayat School Grounds",
+  "dates": "11 Sept - 14 Sept 2026",
+  "liveMatch": {
+    "tournament": "Kabaddi Finals",
+    "team1": "Srikolanu Warriors",
+    "team1Score": 38,
+    "team2": "Riverbank Titans",
+    "team2Score": 32,
+    "half": "2nd Half: 14:22",
+    "court": "Court 1 • Kabaddi Finals",
+    "status": "In Progress",
+    "lastUpdated": "Just now"
+  },
+  "leaderboard": [
+    {
+      "rank": 1,
+      "teamName": "Srikolanu Warriors",
+      "wardStreet": "B.C. Colony Main Street",
+      "category": "Kabaddi Tournament",
+      "matchesPlayed": 5,
+      "matchesWon": 5,
+      "points": 480,
+      "matchStatus": "Finalists",
+      "rewardTier": "Rolling Silver Shield"
+    },
+    {
+      "rank": 2,
+      "teamName": "Riverbank Titans",
+      "wardStreet": "Godavari Bund Road",
+      "category": "Kabaddi Tournament",
+      "matchesPlayed": 5,
+      "matchesWon": 4,
+      "points": 420,
+      "matchStatus": "Finalists",
+      "rewardTier": "Runner-Up Cup"
+    },
+    {
+      "rank": 3,
+      "teamName": "Veera Hanuman Youth",
+      "wardStreet": "Temple Street East",
+      "category": "Volleyball League",
+      "matchesPlayed": 4,
+      "matchesWon": 3,
+      "points": 340,
+      "matchStatus": "Semi-Final",
+      "rewardTier": "Bronze Medallion"
+    },
+    {
+      "rank": 4,
+      "teamName": "Ganesh Yuvajana Sangham",
+      "wardStreet": "Cross Road 4",
+      "category": "Tug-of-War Championship",
+      "matchesPlayed": 4,
+      "matchesWon": 3,
+      "points": 310,
+      "matchStatus": "Quarter-Final",
+      "rewardTier": "Medals & Cash Prize"
+    },
+    {
+      "rank": 5,
+      "teamName": "Sri Saraswathi Mahila Mandali",
+      "wardStreet": "B.C. Colony Cross 2",
+      "category": "Traditional Sports",
+      "matchesPlayed": 3,
+      "matchesWon": 3,
+      "points": 295,
+      "matchStatus": "Final",
+      "rewardTier": "Brass Cookware Set"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "currency": "INR",
+  "totalCollected": 105000,
+  "verifiedCount": 5,
+  "summary": {
+    "cashTotal": 30000,
+    "upiTotal": 25000,
+    "bankNeftTotal": 50000
+  },
+  "records": [
+    {
+      "id": "txn-1",
+      "txnId": "TXN-98241",
+      "donorName": "BC Colony Youth - Srikolanu",
+      "village": "Srikolanu",
+      "sevaType": "Maha Ganapathi Homam & Pushpa Pooja",
+      "paymentMethod": "HAND CASH",
+      "amount": 15000,
+      "status": "Verified",
+      "timestamp": "10 Sept 2026, 18:45 IST"
+    },
+    {
+      "id": "txn-2",
+      "txnId": "TXN-98240",
+      "donorName": "BC Colony Youth - Srikolanu",
+      "village": "Srikolanu",
+      "sevaType": "Grand Evening Prasadam Annadanam",
+      "paymentMethod": "HAND CASH",
+      "amount": 10000,
+      "status": "Verified",
+      "timestamp": "10 Sept 2026, 17:30 IST"
+    },
+    {
+      "id": "txn-3",
+      "txnId": "TXN-98239",
+      "donorName": "BC Colony Youth - Srikolanu",
+      "village": "Srikolanu",
+      "sevaType": "Nimajjanam Rath Decoration Seva",
+      "paymentMethod": "HAND CASH",
+      "amount": 5000,
+      "status": "Verified",
+      "timestamp": "10 Sept 2026, 16:15 IST"
+    },
+    {
+      "id": "txn-4",
+      "txnId": "TXN-98238",
+      "donorName": "Sri V. Satyanarayana Murthy",
+      "village": "Kakinada / Srikolanu",
+      "sevaType": "Swarna Pushpa Alankaram & Chariot",
+      "paymentMethod": "UPI",
+      "amount": 25000,
+      "status": "Verified",
+      "timestamp": "09 Sept 2026, 14:00 IST"
+    },
+    {
+      "id": "txn-5",
+      "txnId": "TXN-98237",
+      "donorName": "Sri K. Nageswara Rao & Sons",
+      "village": "Srikolanu",
+      "sevaType": "Silver Jubilee Mandapam Architecture",
+      "paymentMethod": "BANK NEFT",
+      "amount": 50000,
+      "status": "Verified",
+      "timestamp": "08 Sept 2026, 11:20 IST"
+    }
+  ]
+}

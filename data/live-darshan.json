@@ -1,0 +1,43 @@
+{
+  "enabled": true,
+  "templeState": "Sanctum Active • Live Feed Online",
+  "activeCameraId": "cam-1",
+  "cameras": [
+    {
+      "id": "cam-1",
+      "name": "Sanctum Cam 01",
+      "label": "Main Sanctum Murti",
+      "streamUrl": "https://images.unsplash.com/photo-1567591370504-20a22cf88836?auto=format&fit=crop&w=1200&q=85",
+      "badge": "LIVE UHD",
+      "status": "active",
+      "order": 1
+    },
+    {
+      "id": "cam-2",
+      "name": "Yagasala Cam 02",
+      "label": "Maha Homa Kundam",
+      "streamUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=85",
+      "badge": "HAVAN",
+      "status": "active",
+      "order": 2
+    },
+    {
+      "id": "cam-3",
+      "name": "Queue Cam 03",
+      "label": "Devotee Pradakshina Gate",
+      "streamUrl": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=85",
+      "badge": "FLOW",
+      "status": "active",
+      "order": 3
+    },
+    {
+      "id": "cam-4",
+      "name": "Auditorium Cam 04",
+      "label": "Cultural Dias Stage",
+      "streamUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=85",
+      "badge": "STAGE",
+      "status": "active",
+      "order": 4
+    }
+  ]
+}

@@ -22,7 +22,6 @@ import {
 import { useFestival } from '../context/FestivalContext';
 import { AartiCountdown } from '../components/AartiCountdown';
 import { LiveDarshanPlayer } from '../components/LiveDarshanPlayer';
-import { INITIAL_DAYS_ITINERARY, GALLERY_MOMENTS } from '../data/festivalData';
 
 interface HomePageProps {
   setCurrentPage: (page: string) => void;
@@ -36,7 +35,9 @@ export const HomePage: React.FC<HomePageProps> = ({
   onOpenDonationModal,
 }) => {
   const {
-    crowdStatus,
+    festivalInfo,
+    events,
+    galleryData,
     prasadItems,
     isChantPlaying,
     togglePlayChant,
@@ -47,10 +48,22 @@ export const HomePage: React.FC<HomePageProps> = ({
   } = useFestival();
 
   const [activePhotoPreview, setActivePhotoPreview] = useState<string | null>(null);
+  const [showElderNotice, setShowElderNotice] = useState(false);
 
-  const todayItinerary = INITIAL_DAYS_ITINERARY[0];
-  const ongoingRitual = todayItinerary.rituals.find((r) => r.status === 'ongoing') || todayItinerary.rituals[1];
-  const upcomingRituals = todayItinerary.rituals.filter((r) => r.status === 'upcoming').slice(0, 3);
+  const todayItinerary = events?.[0] || {
+    dayNumber: 1,
+    title: 'Ganesh Chaturthi Prathama Pooja',
+    subtitle: 'Maha Sthapana & Avahana',
+    rituals: [],
+  };
+  const ongoingRitual = todayItinerary.rituals?.find((r) => r.status === 'ongoing') || todayItinerary.rituals?.[0] || {
+    period: 'MORNING',
+    title: 'Maha Ganapathi Pooja',
+    description: 'Consecration rituals and sacred deepa aradhana.',
+    venue: 'Main Sanctum',
+    time: '08:00 AM',
+  };
+  const upcomingRituals = (todayItinerary.rituals || []).filter((r) => r.status === 'upcoming').slice(0, 3);
 
   return (
     <div className="space-y-14 pb-16">
@@ -288,7 +301,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </button>
           </div>
 
-          {/* Card 3: Live Queue & Crowd Tracker */}
+          {/* Card 3: Mandapam Gate & Queue Flow */}
           <div
             id="quick-queue-card"
             className="rounded-2xl temple-glass p-6 border border-amber-500/30 flex flex-col justify-between gap-4 shadow-xl hover:border-amber-400/50 transition"
@@ -296,31 +309,34 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold uppercase tracking-widest text-amber-400 bg-amber-950/60 px-2.5 py-1 rounded-full border border-amber-500/30">
-                  Pandal Operations
+                  Mandapam Logistics
                 </span>
-                <span className="text-[11px] text-amber-400/70">Updated {crowdStatus.lastUpdated}</span>
+                <span className="text-[11px] text-green-400 font-semibold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                  Active Flow
+                </span>
               </div>
 
               <h3 className="font-heading text-xl font-bold text-[#FFFDF5]">
-                Queue & Crowd Flow
+                Queue & Darshan Access
               </h3>
 
               {/* Wait time display */}
               <div className="p-4 rounded-xl bg-[#800000]/30 border border-amber-500/30 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] uppercase font-bold text-amber-300/80">
-                    Estimated Queue Time
+                    Typical Queue Time
                   </span>
                   <div className="font-heading text-3xl font-black text-amber-300">
-                    ~{crowdStatus.currentWaitMinutes} <span className="text-sm font-normal text-amber-100">mins</span>
+                    ~5-10 <span className="text-sm font-normal text-amber-100">mins</span>
                   </div>
                 </div>
                 <div className="text-right">
                   <span className="text-[10px] uppercase font-bold text-amber-300/80 block">
                     Crowd Density
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-amber-400 text-black font-bold text-xs inline-block mt-0.5">
-                    {crowdStatus.crowdDensity}
+                  <span className="px-2.5 py-1 rounded-full bg-emerald-700 text-white font-bold text-xs inline-block mt-0.5">
+                    Smooth
                   </span>
                 </div>
               </div>
@@ -329,15 +345,15 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="space-y-2 text-xs">
                 <div className="flex items-center justify-between p-2 rounded-lg bg-black/40 border border-amber-500/15">
                   <span className="text-amber-200/90 font-medium">Gate 1 (General Entry):</span>
-                  <span className="text-green-400 font-bold">{crowdStatus.gate1Status}</span>
+                  <span className="text-green-400 font-bold">Open & Moving</span>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded-lg bg-black/40 border border-amber-500/15">
                   <span className="text-amber-200/90 font-medium">Gate 2 (Elder & Wheelchair):</span>
-                  <span className="text-amber-300 font-bold">{crowdStatus.gate2Status}</span>
+                  <span className="text-amber-300 font-bold">Direct Assistance</span>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded-lg bg-black/40 border border-amber-500/15 text-[11px]">
-                  <span className="text-amber-200/70">Peak Influx Expected:</span>
-                  <span className="text-amber-300 font-bold">{crowdStatus.peakExpectedTime}</span>
+                  <span className="text-amber-200/70">Aarti Confluence:</span>
+                  <span className="text-amber-300 font-bold">07:00 PM & 09:00 PM</span>
                 </div>
               </div>
             </div>
@@ -346,7 +362,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <button
                 onClick={() => {
                   playTempleBell();
-                  alert('Free Golf Cart / Wheelchair assistance is available at Gate 2. Please call helpline: +91 9912106189.');
+                  setShowElderNotice(true);
                 }}
                 className="w-full py-2.5 rounded-xl bg-black/50 border border-amber-500/30 text-amber-300 text-xs font-bold hover:bg-amber-950/40 transition"
               >
@@ -356,6 +372,28 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
       </section>
+
+      {/* Elder Notice Modal */}
+      {showElderNotice && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="max-w-md w-full p-6 rounded-2xl temple-glass border border-amber-400 space-y-4 text-center">
+            <h4 className="font-heading text-xl font-bold text-amber-200">Elder & Wheelchair Seva</h4>
+            <p className="text-xs text-amber-100/90 leading-relaxed">
+              Complimentary wheelchair and priority shaded seating are stationed at Gate 2.
+              Volunteers are on standby to accompany senior devotees directly to sanctum darshan.
+            </p>
+            <p className="text-xs font-mono text-amber-300 font-bold">
+              Helpline: {festivalInfo.contacts.helpline}
+            </p>
+            <button
+              onClick={() => setShowElderNotice(false)}
+              className="px-6 py-2 rounded-xl bg-amber-400 text-black font-bold text-xs hover:bg-amber-300"
+            >
+              Understood
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* 4. Sanctum Sounds Audio Player */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -436,7 +474,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {GALLERY_MOMENTS.slice(0, 3).map((moment) => (
+          {galleryData.moments.slice(0, 3).map((moment) => (
             <div
               key={moment.id}
               onClick={() => setActivePhotoPreview(moment.imageUrl)}

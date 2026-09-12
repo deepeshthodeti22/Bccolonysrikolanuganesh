@@ -16,7 +16,7 @@ export const RegistrationModal: React.FC<RegModalProps> = ({
 }) => {
   const { competitions, registerForCompetition } = useFestival();
   const [selectedCompId, setSelectedCompId] = useState(
-    defaultCompId || competitions[0]?.id || ''
+    defaultCompId || competitions?.[0]?.id || ''
   );
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');

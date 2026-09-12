@@ -17,7 +17,7 @@ import { useFestival } from '../context/FestivalContext';
 
 export const AboutPage: React.FC = () => {
   const { playTempleBell } = useFestival();
-  const [expandedStoryId, setExpandedStoryId] = useState<string>(MYTH_STORIES[0].id);
+  const [expandedStoryId, setExpandedStoryId] = useState<string>(MYTH_STORIES?.[0]?.id || 'story-1');
   const [playingShlokaId, setPlayingShlokaId] = useState<string | null>(null);
   const [volunteerName, setVolunteerName] = useState('');
   const [volunteerPhone, setVolunteerPhone] = useState('');
@@ -84,10 +84,10 @@ export const AboutPage: React.FC = () => {
           </div>
           <div className="p-4 rounded-xl bg-black/40 border border-amber-500/25">
             <span className="font-heading text-2xl sm:text-3xl font-extrabold text-amber-300 block">
-              ₹0 Secret
+              15,000+
             </span>
             <span className="text-[11px] uppercase font-bold text-amber-200/70 tracking-wider">
-              Public Ledger
+              Expected Pilgrims
             </span>
           </div>
         </div>
@@ -221,7 +221,7 @@ export const AboutPage: React.FC = () => {
           <div className="p-5 rounded-2xl bg-[#800000]/40 border border-amber-400 space-y-2">
             <span className="font-heading text-xl font-black text-amber-300">2026: Silver Jubilee Era</span>
             <p className="text-xs text-amber-100 leading-relaxed">
-              Celebrating 25 years with high-definition live darshan, public financial transparency, village sports tournaments, educational sponsorships, and 50,000+ expected pilgrim footfalls.
+              Celebrating 25 years with high-definition live darshan, traditional prasadam, village sports tournaments, educational sponsorships, and 15,000+ expected pilgrim footfalls.
             </p>
           </div>
         </div>

@@ -21,7 +21,7 @@ const SEVA_OPTIONS = [
 ];
 
 export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
-  const { addDonation, playTempleBell } = useFestival();
+  const { recordDevoteeSevaOffering, playTempleBell } = useFestival();
   const [donorName, setDonorName] = useState('');
   const [amount, setAmount] = useState<number>(501);
   const [customAmount, setCustomAmount] = useState('');
@@ -50,7 +50,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
     e.preventDefault();
     if (!donorName.trim() || amount <= 0) return;
 
-    const record = addDonation(donorName, amount, sevaType, village, paymentMethod);
+    const record = recordDevoteeSevaOffering(donorName, amount, sevaType, village, paymentMethod);
     setReceipt(record);
     playTempleBell();
 
@@ -88,13 +88,13 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#800000] border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
                 <Flame className="w-3.5 h-3.5 text-amber-400" />
-                <span>100% Transparent Seva Fund</span>
+                <span>Sacred Devotee Offering</span>
               </div>
               <h3 className="font-heading text-2xl font-bold text-[#FFFDF5]">
                 Pooja Seva & Sacred Contribution
               </h3>
               <p className="text-xs text-amber-200/80 mt-1">
-                Every rupee is publicly audited and dedicated to Vedic rituals, Annadanam, and colony upliftment.
+                Dedicated directly to daily Vedic rituals, Annadanam holy feast, and temple alankaram.
               </p>
             </div>
 
@@ -281,7 +281,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
                 <div>
                   <span className="text-amber-200/70 block">Amount Blessed:</span>
                   <span className="font-heading font-extrabold text-xl text-amber-300">
-                    ₹{receipt.amount.toLocaleString()}
+                    ₹{(receipt.amount || 0).toLocaleString()}
                   </span>
                 </div>
               </div>

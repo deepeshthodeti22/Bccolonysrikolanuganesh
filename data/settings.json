@@ -1,0 +1,17 @@
+{
+  "festivalStatus": "published",
+  "maintenanceMode": false,
+  "enableLiveDarshan": true,
+  "enablePrasadBooking": true,
+  "enableCompetitions": true,
+  "enableSportsScoreboard": true,
+  "enableAnnouncementsTicker": true,
+  "enablePublicDonationAction": true,
+  "aartiTimes": {
+    "morning": "08:00 AM",
+    "afternoon": "12:30 PM",
+    "evening": "07:30 PM"
+  },
+  "helpline": "+91 9912106189",
+  "emergencyAddress": "Sri Vinayaka Mandapam, B.C. Colony, Srikolanu - 533261"
+}

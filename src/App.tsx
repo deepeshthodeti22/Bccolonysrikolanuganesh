@@ -9,7 +9,6 @@ import { EventsPage } from './pages/EventsPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { GamesPage } from './pages/GamesPage';
 import { AdminPage } from './pages/AdminPage';
-import { BackendArchitecturePage } from './pages/BackendArchitecturePage';
 import { PrasadBookingModal } from './components/PrasadBookingModal';
 import { DonationModal } from './components/DonationModal';
 import { Sparkles, Heart } from 'lucide-react';
@@ -53,7 +52,6 @@ function FestivalAppContent() {
         {currentPage === 'gallery' && <GalleryPage />}
         {currentPage === 'games' && <GamesPage />}
         {currentPage === 'admin' && <AdminPage />}
-        {currentPage === 'backend' && <BackendArchitecturePage />}
       </main>
 
       {/* 4. Global Modals */}

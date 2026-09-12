@@ -1,0 +1,269 @@
+[
+  {
+    "dayNumber": 1,
+    "date": "07 Sept 2026",
+    "title": "Ganesh Chaturthi • Prana Pratishtha",
+    "subtitle": "Sacred Installation & Maha Ganapathi Homam",
+    "rituals": [
+      {
+        "id": "r-1-1",
+        "time": "06:00 AM",
+        "period": "MORNING",
+        "title": "Maha Ganapathi Pooja & Prana Pratishtha",
+        "description": "Vedic invocation by Kakinada Veda Pathashala Ghanapathis consecrating the 25-ft Eco-Clay Utsava Murti.",
+        "venue": "Main Sanctum (Garbha Gudi)",
+        "tag": "Main Ritual",
+        "status": "completed",
+        "isLiveStreamed": true
+      },
+      {
+        "id": "r-1-2",
+        "time": "09:30 AM",
+        "period": "MORNING",
+        "title": "Panchamrutha Abhishekam with Sacred Waters",
+        "description": "Ceremonial ablution using pure Godavari holy water, raw honey, organic cow milk, curd, and sugarcane juice.",
+        "venue": "Yagasala Sanctum",
+        "tag": "Abhishekam",
+        "status": "ongoing",
+        "isLiveStreamed": true
+      },
+      {
+        "id": "r-1-3",
+        "time": "12:30 PM",
+        "period": "AFTERNOON",
+        "title": "Maha Naivedyam & Annadanam Seva Launch",
+        "description": "Offering of 21 traditional naivedyams followed by serving consecrated meals to over 3,000 devotees.",
+        "venue": "Annadanam Hall",
+        "tag": "Annadanam",
+        "status": "upcoming",
+        "isLiveStreamed": false
+      },
+      {
+        "id": "r-1-4",
+        "time": "07:00 PM",
+        "period": "EVENING",
+        "title": "Maha Deeparadhana & Sandhya Aarti",
+        "description": "Illuminating the mandapam with 108 brass lamps and traditional percussion accompaniment.",
+        "venue": "Main Pandal",
+        "tag": "Sandhya Aarti",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  },
+  {
+    "dayNumber": 2,
+    "date": "08 Sept 2026",
+    "title": "Riddhi Siddhi Kalyana Mahotsavam",
+    "subtitle": "Divine Celestial Wedding Ceremony",
+    "rituals": [
+      {
+        "id": "r-2-1",
+        "time": "08:30 AM",
+        "period": "MORNING",
+        "title": "Sri Riddhi Siddhi Sametha Vinayaka Kalyanam",
+        "description": "Grand Vedic wedding ritual fostering marital peace, family harmony, and prosperity across the village.",
+        "venue": "Kalyana Mandapam Dais",
+        "tag": "Kalyanam",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      },
+      {
+        "id": "r-2-2",
+        "time": "07:30 PM",
+        "period": "EVENING",
+        "title": "Carnatic Classical Nadaswaram Recital",
+        "description": "Musical seva performed by celebrated temple vidwans honoring Lord Ganapathi.",
+        "venue": "Cultural Stage",
+        "tag": "Cultural Program",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  },
+  {
+    "dayNumber": 3,
+    "date": "09 Sept 2026",
+    "title": "Sahasra Modak Homa Seva",
+    "subtitle": "1008 Sweet Offerings in Sacred Fire",
+    "rituals": [
+      {
+        "id": "r-3-1",
+        "time": "07:00 AM",
+        "period": "MORNING",
+        "title": "1008 Modaka Maha Ganapathi Yagam",
+        "description": "Auspicious havan offering 1,008 freshly hand-crafted modaks with pure desi ghee into the consecrated flame.",
+        "venue": "Yagasala Mandapam",
+        "tag": "Homam",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      },
+      {
+        "id": "r-3-2",
+        "time": "06:30 PM",
+        "period": "EVENING",
+        "title": "Harikatha Gana Sudha: Vinayaka Vijayam",
+        "description": "Traditional Telugu musical discourse depicting the valor and supreme wisdom of Vighnaharta.",
+        "venue": "Community Amphitheater",
+        "tag": "Harikatha",
+        "status": "upcoming",
+        "isLiveStreamed": false
+      }
+    ]
+  },
+  {
+    "dayNumber": 4,
+    "date": "10 Sept 2026",
+    "title": "Gaja Vahana Seva & Modak Contest",
+    "subtitle": "Royal Procession & Traditional Cooking",
+    "rituals": [
+      {
+        "id": "r-4-1",
+        "time": "03:00 PM",
+        "period": "AFTERNOON",
+        "title": "Colony Modak & Traditional Sweet Making Contest",
+        "description": "Over 40 home chefs compete with traditional steamed modaks, bellam kudumulu, and undrallu.",
+        "venue": "Annadanam Bhavan",
+        "tag": "Competition",
+        "status": "upcoming",
+        "isLiveStreamed": false
+      },
+      {
+        "id": "r-4-2",
+        "time": "07:30 PM",
+        "period": "EVENING",
+        "title": "Swarna Gaja Vahana Seva",
+        "description": "Lord Vinayaka adorned on the magnificent golden elephant vahana for darshan.",
+        "venue": "Main Sanctum",
+        "tag": "Vahana Seva",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  },
+  {
+    "dayNumber": 5,
+    "date": "11 Sept 2026",
+    "title": "Laksha Bilwarchana & Kumkumarchana",
+    "subtitle": "100,000 Sacred Leaves Puja for World Peace",
+    "rituals": [
+      {
+        "id": "r-5-1",
+        "time": "08:00 AM",
+        "period": "MORNING",
+        "title": "Maha Laksha Bilvarchana with Ganesha Ashtottara",
+        "description": "Continuous chanting of Ganesha names with 100,000 sacred bilwa leaves offered by 50 ritwiks.",
+        "venue": "Main Sanctum",
+        "tag": "Archana",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      },
+      {
+        "id": "r-5-2",
+        "time": "07:00 PM",
+        "period": "EVENING",
+        "title": "Kuchipudi Nritya Vaibhavam",
+        "description": "Classical Kuchipudi dance performance depicting Ganesha Kautuvam and Shiva Parvati Tandavam.",
+        "venue": "Main Stage",
+        "tag": "Cultural",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  },
+  {
+    "dayNumber": 6,
+    "date": "12 Sept 2026",
+    "title": "Silver Jubilee Sports Championship",
+    "subtitle": "Village Kabaddi, Volleyball & Tug of War",
+    "rituals": [
+      {
+        "id": "r-6-1",
+        "time": "09:00 AM",
+        "period": "MORNING",
+        "title": "B.C. Colony Inter-Ward Sports Meet Inauguration",
+        "description": "Traditional wrestling, kabaddi, and volleyball tournaments featuring 16 rural youth teams.",
+        "venue": "Gram Panchayat School Grounds",
+        "tag": "Sports",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  },
+  {
+    "dayNumber": 7,
+    "date": "13 Sept 2026",
+    "title": "Rangoli Utsavam & Bhakti Sangeet",
+    "subtitle": "Colony Muggulu Competition & Choral Singing",
+    "rituals": [
+      {
+        "id": "r-7-1",
+        "time": "07:00 AM",
+        "period": "MORNING",
+        "title": "Grand Women's Rangoli / Muggulu Fest",
+        "description": "Over 60 colorful devotional floor tapestries celebrating Ganesha motifs.",
+        "venue": "Temple Cross Street",
+        "tag": "Competition",
+        "status": "upcoming",
+        "isLiveStreamed": false
+      }
+    ]
+  },
+  {
+    "dayNumber": 8,
+    "date": "14 Sept 2026",
+    "title": "Kanya Pooja & Elders Felicitations",
+    "subtitle": "Honoring Village Elders & Meritorious Youth",
+    "rituals": [
+      {
+        "id": "r-8-1",
+        "time": "10:00 AM",
+        "period": "MORNING",
+        "title": "Samuhika Kanya Pooja & Vidyarthi Satkaram",
+        "description": "Blessings for 108 school girls and distribution of notebooks and stationery kits.",
+        "venue": "Community Hall",
+        "tag": "Seva",
+        "status": "upcoming",
+        "isLiveStreamed": false
+      }
+    ]
+  },
+  {
+    "dayNumber": 9,
+    "date": "15 Sept 2026",
+    "title": "Maha Laddu Auction & Deepotsavam",
+    "subtitle": "Auspicious Prasadam Bidding & 1008 Lamps",
+    "rituals": [
+      {
+        "id": "r-9-1",
+        "time": "08:00 PM",
+        "period": "NIGHT",
+        "title": "21-Kg Sacred Maha Laddu Public Auction",
+        "description": "Historic auction where community benefactors bid to support educational scholarships and village welfare.",
+        "venue": "Central Dais",
+        "tag": "Historic Event",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  },
+  {
+    "dayNumber": 10,
+    "date": "16 Sept 2026",
+    "title": "Maha Visarjan Shobha Yatra",
+    "subtitle": "Immersion & Royal Chariot Procession",
+    "rituals": [
+      {
+        "id": "r-10-1",
+        "time": "02:00 PM",
+        "period": "YATRA",
+        "title": "Royal Floral Ratham Departure with Chenda Melam",
+        "description": "30-foot illuminated pushpa ratham carrying Utsava Murthi through B.C. Colony to the sacred riverbank.",
+        "venue": "Procession Route to Riverbank",
+        "tag": "Visarjan",
+        "status": "upcoming",
+        "isLiveStreamed": true
+      }
+    ]
+  }
+]

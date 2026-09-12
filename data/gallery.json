@@ -1,0 +1,169 @@
+{
+  "achievements": [
+    {
+      "id": "ach-1",
+      "year": 2026,
+      "title": "Youth Committee Mandapam Leadership & Alankaram Honour",
+      "awardHonor": "Best Mandapam Decoration & Ritual Management 2026",
+      "team": "Sri Vinayaka Youth Core Wing",
+      "imageUrl": "/images/achievements/youth_committee_mandap.jpg",
+      "description": "Standing proudly before Lord Ganesha idol adorned with golden silk garments and fresh flower garlands, celebrating excellence in mandapam coordination.",
+      "keyHighlight": "Designed 100% natural flower canopy & illuminated darshan arch",
+      "tags": ["Mandapam", "Alankaram", "YouthPride"]
+    },
+    {
+      "id": "ach-2",
+      "year": 2026,
+      "title": "Sanctum Altar Custodians & Sacred Dhoti Seva",
+      "awardHonor": "Sanctum Stewardship & Puja Protocol Citation",
+      "team": "Sanctum Seva Dal",
+      "imageUrl": "/images/achievements/youth_volunteers_altar.jpg",
+      "description": "Seated reverently at the sanctum altar draped in traditional white silk dhoti with gold borders, managing offerings and archana plates with Vedic discipline.",
+      "keyHighlight": "Flawless queue & pushpanjali coordination for 12,000+ devotees",
+      "tags": ["Sanctum", "PujaSeva", "Discipline"]
+    },
+    {
+      "id": "ach-3",
+      "year": 2026,
+      "title": "Pandal Architecture & Youth Organizing Milestone",
+      "awardHonor": "Community Organization & Heritage Seva Honor",
+      "team": "Operations & Logistics Wing",
+      "imageUrl": "/images/achievements/committee_organizers.jpg",
+      "description": "Standing on the sacred dais celebrating the festive success and silver jubilee organizational achievements with village elders and youth.",
+      "keyHighlight": "Zero-incident crowd movement & sustainable eco-waste protocols",
+      "tags": ["Leadership", "SilverJubilee", "SrikolanuPride"]
+    },
+    {
+      "id": "ach-4",
+      "year": 2026,
+      "title": "Maha Nimajjanam Visarjan Grand Procession Triumph",
+      "awardHonor": "Grand Visarjan Rolling Trophy 2026",
+      "team": "Visarjan Shobha Yatra Vahini",
+      "imageUrl": "/images/achievements/visarjan_youth_rally.jpg",
+      "description": "Vibrant celebration around the glowing ratham chariot during the grand immersion procession along the village lanes to the Godavari riverbank.",
+      "keyHighlight": "30-foot floral chariot escorted safely with traditional Chenda Melam",
+      "tags": ["Visarjan", "Procession", "TrophyWinner"]
+    }
+  ],
+  "moments": [
+    {
+      "id": "gal-ach-1",
+      "title": "Youth Committee Mandapam Leadership & Alankaram Honour",
+      "category": "mandapam",
+      "imageUrl": "/images/achievements/youth_committee_mandap.jpg",
+      "timeTag": "2026 Silver Jubilee",
+      "views": 4820,
+      "photoCount": 18,
+      "is4k": true
+    },
+    {
+      "id": "gal-ach-2",
+      "title": "Sanctum Altar Custodians & Sacred Dhoti Seva",
+      "category": "aarti",
+      "imageUrl": "/images/achievements/youth_volunteers_altar.jpg",
+      "timeTag": "Sanctum Seva",
+      "views": 3950,
+      "photoCount": 14,
+      "is4k": true
+    },
+    {
+      "id": "gal-ach-3",
+      "title": "Pandal Architecture & Youth Organizing Milestone",
+      "category": "cultural",
+      "imageUrl": "/images/achievements/committee_organizers.jpg",
+      "timeTag": "Committee Honor",
+      "views": 3610,
+      "photoCount": 12,
+      "is4k": true
+    },
+    {
+      "id": "gal-ach-4",
+      "title": "Maha Nimajjanam Visarjan Grand Procession Triumph",
+      "category": "procession",
+      "imageUrl": "/images/achievements/visarjan_youth_rally.jpg",
+      "timeTag": "Visarjan Chariot",
+      "views": 5240,
+      "photoCount": 24,
+      "is4k": true
+    },
+    {
+      "id": "gal-1",
+      "title": "Swarna Kavacha Maha Aarti at Sunset",
+      "category": "aarti",
+      "imageUrl": "https://images.unsplash.com/photo-1567591370504-20a22cf88836?auto=format&fit=crop&w=1200&q=85",
+      "timeTag": "Day 01 Sunset",
+      "views": 1840,
+      "photoCount": 12,
+      "is4k": true
+    },
+    {
+      "id": "gal-2",
+      "title": "25-Foot Eco-Friendly Clay Murti Installation",
+      "category": "mandapam",
+      "imageUrl": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=85",
+      "timeTag": "Sthapana Morning",
+      "views": 2410,
+      "photoCount": 18,
+      "is4k": true
+    },
+    {
+      "id": "gal-3",
+      "title": "Sahasra Modak Naivedyam & Annadanam Seva",
+      "category": "prasadam",
+      "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=85",
+      "timeTag": "Noon Feast",
+      "views": 1590,
+      "photoCount": 8,
+      "is4k": false
+    },
+    {
+      "id": "gal-4",
+      "title": "Traditional Kuchipudi Nritya Vaibhavam on Dais",
+      "category": "cultural",
+      "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=85",
+      "timeTag": "Night Stage",
+      "views": 980,
+      "photoCount": 22,
+      "is4k": true
+    },
+    {
+      "id": "gal-5",
+      "title": "Illuminated Pushpa Ratham Shobha Yatra",
+      "category": "procession",
+      "imageUrl": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=1200&q=85",
+      "timeTag": "Nimajjanam Yatra",
+      "views": 3120,
+      "photoCount": 35,
+      "is4k": true
+    }
+  ],
+  "vault": [
+    {
+      "id": "v-2026",
+      "year": 2026,
+      "themeTitle": "25th Silver Jubilee • Swarna Mayura Mandapam",
+      "imageUrl": "/images/achievements/youth_committee_mandap.jpg",
+      "idolHeight": "25 Feet (100% Godavari Clay)",
+      "mandapamStyle": "Hoysala & Dravidian Hybrid Golden Pavilion",
+      "description": "Silver jubilee landmark featuring 108 illuminated kalashas, organic botanical dyes, and flower garlands."
+    },
+    {
+      "id": "v-2025",
+      "year": 2025,
+      "themeTitle": "Sahasra Bhuja Maha Ganapathi",
+      "imageUrl": "https://images.unsplash.com/photo-1567591370504-20a22cf88836?auto=format&fit=crop&w=800&q=80",
+      "idolHeight": "21 Feet (Eco Clay)",
+      "mandapamStyle": "Kailasha Parvata Rock Cut Sanctum",
+      "description": "Portraying 1,000 blessing hands holding sacred attributes, surrounded by natural indoor waterfalls."
+    },
+    {
+      "id": "v-2024",
+      "year": 2024,
+      "themeTitle": "Kalinga Mardana Ganapathi Vaibhavam",
+      "imageUrl": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+      "idolHeight": "19 Feet (Natural Red Clay)",
+      "mandapamStyle": "Brihadeeswara Temple Chola Gopuram Replica",
+      "description": "Majestic serpentine pedestal crafted with 100% natural clay and rice straw armature."
+    }
+  ]
+}

@@ -8,7 +8,6 @@ import {
   X,
   Sparkles,
   Flame,
-  Code2,
 } from 'lucide-react';
 import { useFestival } from '../context/FestivalContext';
 
@@ -42,7 +41,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'gallery', label: 'Gallery & Archive' },
     { id: 'games', label: 'Games & Scores' },
     { id: 'admin', label: 'Admin Portal' },
-    { id: 'backend', label: 'Backend & n8n' },
   ];
 
   return (
@@ -98,7 +96,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                       : 'text-amber-100/80 hover:text-amber-200 hover:bg-black/30'
                   }`}
                 >
-                  {link.id === 'backend' && <Code2 className="w-3.5 h-3.5 inline mr-1 text-amber-400" />}
                   {link.label}
                   {isActive && (
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-200 rounded-full"></span>
@@ -156,7 +153,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Video className="w-4 h-4 text-amber-300" />
               <span>Live Darshan</span>
               <span className="hidden xl:inline text-[11px] font-normal text-amber-200/90 ml-1">
-                ({liveStreamWatching.toLocaleString()})
+                ({(liveStreamWatching ?? 4280).toLocaleString()})
               </span>
             </button>
 
@@ -233,7 +230,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#800000] border border-amber-500/40 text-amber-200 font-bold text-sm shadow-lg"
             >
               <Video className="w-4 h-4 text-red-400" />
-              <span>Watch Live Darshan ({liveStreamWatching} Online)</span>
+              <span>Watch Live Darshan ({(liveStreamWatching ?? 4280).toLocaleString()} Online)</span>
             </button>
 
             {onOpenDonation && (

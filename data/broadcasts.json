@@ -1,0 +1,18 @@
+[
+  {
+    "id": "bc-1",
+    "message": "🪔 Maha Aarti at Main Sanctum begins in 15 minutes. Devotees kindly assemble.",
+    "priority": "urgent",
+    "createdAt": "2026-09-12 18:30",
+    "active": true,
+    "targetChannels": ["Pandal LED", "Website Ticker"]
+  },
+  {
+    "id": "bc-2",
+    "message": "🍯 Laddu Prasadam counters open at Mandapam West Counter #03.",
+    "priority": "normal",
+    "createdAt": "2026-09-12 17:45",
+    "active": true,
+    "targetChannels": ["Website Ticker"]
+  }
+]

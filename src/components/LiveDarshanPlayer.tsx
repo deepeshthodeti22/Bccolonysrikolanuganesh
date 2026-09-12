@@ -21,7 +21,7 @@ export const LiveDarshanPlayer: React.FC<LiveDarshanProps> = ({
   onPrasadClick,
 }) => {
   const {
-    liveStreamWatching,
+    darshanConfig,
     activeCamera,
     setActiveCamera,
     playTempleBell,
@@ -30,8 +30,9 @@ export const LiveDarshanPlayer: React.FC<LiveDarshanProps> = ({
   const [isAudioMuted, setIsAudioMuted] = useState(false);
   const [pranamsCount, setPranamsCount] = useState(8490);
   const [hasOfferedFlower, setHasOfferedFlower] = useState(false);
+  const liveStreamWatching = darshanConfig?.activeViewers || 4280;
 
-  const cameras = [
+  const cameras = darshanConfig?.cameras && darshanConfig.cameras.length > 0 ? darshanConfig.cameras : [
     {
       id: 'cam-1',
       name: 'Sanctum Cam 01',
@@ -46,23 +47,16 @@ export const LiveDarshanPlayer: React.FC<LiveDarshanProps> = ({
       img: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=85',
       badge: 'HAVAN',
     },
-    {
-      id: 'cam-3',
-      name: 'Queue Cam 03',
-      label: 'Devotee Pradakshina Gate',
-      img: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=85',
-      badge: 'FLOW',
-    },
-    {
-      id: 'cam-4',
-      name: 'Auditorium Cam 04',
-      label: 'Cultural Dias Stage',
-      img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=85',
-      badge: 'STAGE',
-    },
   ];
 
-  const currentCam = cameras.find((c) => c.id === activeCamera) || cameras[0];
+  const fallbackCam = {
+    id: 'cam-1',
+    name: 'Sanctum Cam 01',
+    label: 'Main Sanctum Murti',
+    img: 'https://images.unsplash.com/photo-1567591370504-20a22cf88836?auto=format&fit=crop&w=1200&q=85',
+    badge: 'LIVE UHD',
+  };
+  const currentCam = (cameras || []).find((c) => c.id === activeCamera) || cameras?.[0] || fallbackCam;
 
   const handleOfferFlowers = () => {
     setPranamsCount((prev) => prev + 1);
@@ -117,7 +111,7 @@ export const LiveDarshanPlayer: React.FC<LiveDarshanProps> = ({
               </span>
               <span className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-amber-200 text-xs font-semibold border border-amber-500/30">
                 <span className="h-1.5 w-1.5 rounded-full bg-green-400"></span>
-                {liveStreamWatching.toLocaleString()} Devotees
+                {(liveStreamWatching ?? 4280).toLocaleString()} Devotees
               </span>
               <span className="hidden md:inline-flex px-2.5 py-1 rounded-full bg-amber-950/80 text-amber-300 text-[11px] font-bold border border-amber-500/40">
                 {currentCam.badge}

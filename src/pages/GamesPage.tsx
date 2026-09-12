@@ -50,7 +50,21 @@ const QUIZ_QUESTIONS = [
 ];
 
 export const GamesPage: React.FC = () => {
-  const { leaderboard, liveMatch, playTempleBell } = useFestival();
+  const { sportsData, leaderboard: contextLeaderboard, liveMatch: contextLiveMatch, playTempleBell } = useFestival();
+  const fallbackLiveMatch = {
+    tournament: 'B.C. Colony Youth Kabaddi Cup',
+    team1: 'Srikolanu Warriors',
+    team1Score: 32,
+    team2: 'Godavari Panthers',
+    team2Score: 28,
+    half: '2nd Half - 8 Mins Left',
+    court: 'Mandapam Ground Court A',
+    lastUpdatedBy: 'Youth Committee Referees',
+    status: 'LIVE',
+  };
+  const leaderboard = contextLeaderboard || sportsData?.leaderboard || [];
+  const liveMatch = contextLiveMatch || sportsData?.liveMatch || fallbackLiveMatch;
+
   const [selectedSport, setSelectedSport] = useState('all');
   const [activeTab, setActiveTab] = useState<'tournament' | 'quiz' | 'arcade'>('tournament');
   const [isRegModalOpen, setIsRegModalOpen] = useState(false);
@@ -79,18 +93,18 @@ export const GamesPage: React.FC = () => {
   const filteredLeaderboard =
     selectedSport === 'all'
       ? leaderboard
-      : leaderboard.filter((entry) => {
-          if (selectedSport === 'kabaddi') return entry.category.toLowerCase().includes('kabaddi');
-          if (selectedSport === 'tug') return entry.category.toLowerCase().includes('tug');
-          if (selectedSport === 'rangoli') return entry.category.toLowerCase().includes('rangoli');
-          if (selectedSport === 'cooking') return entry.category.toLowerCase().includes('modak');
+      : (leaderboard || []).filter((entry) => {
+          if (selectedSport === 'kabaddi') return entry.category?.toLowerCase().includes('kabaddi');
+          if (selectedSport === 'tug') return entry.category?.toLowerCase().includes('tug');
+          if (selectedSport === 'rangoli') return entry.category?.toLowerCase().includes('rangoli');
+          if (selectedSport === 'cooking') return entry.category?.toLowerCase().includes('modak');
           return true;
         });
 
   // Top 3 Podium
-  const rank1 = leaderboard[0];
-  const rank2 = leaderboard[1];
-  const rank3 = leaderboard[2];
+  const rank1 = leaderboard?.[0];
+  const rank2 = leaderboard?.[1];
+  const rank3 = leaderboard?.[2];
 
   // Quiz Handlers
   const handleAnswerSelect = (optionIdx: number) => {
@@ -146,7 +160,7 @@ export const GamesPage: React.FC = () => {
     // Handle mouse/touch movement
     const handleMove = (e: MouseEvent | TouchEvent) => {
       const rect = canvas.getBoundingClientRect();
-      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientX = ('touches' in e && e.touches?.[0]) ? e.touches[0].clientX : ('clientX' in e ? e.clientX : 0);
       const x = clientX - rect.left;
       basketX = Math.max(0, Math.min(canvas.width - basketWidth, x - basketWidth / 2));
     };

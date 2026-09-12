@@ -10,7 +10,7 @@ interface PrasadModalProps {
 
 export const PrasadBookingModal: React.FC<PrasadModalProps> = ({ isOpen, onClose }) => {
   const { prasadItems, bookPrasad } = useFestival();
-  const [selectedItemId, setSelectedItemId] = useState(prasadItems[0]?.id || '');
+  const [selectedItemId, setSelectedItemId] = useState(prasadItems?.[0]?.id || '');
   const [quantity, setQuantity] = useState(1);
   const [devoteeName, setDevoteeName] = useState('');
   const [phone, setPhone] = useState('');

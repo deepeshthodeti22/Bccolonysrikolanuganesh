@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prs-1",
+    "name": "Special Ghee Modak (5 pcs)",
+    "price": 151,
+    "availableCount": 142,
+    "description": "Freshly prepared with pure organic desi cow ghee, cardamom, jaggery & coconut stuffing.",
+    "unit": "boxes",
+    "pickupCounter": "Counter #01 (West Enclosure)",
+    "pickupTiming": "09:00 AM - 01:00 PM & 05:00 PM - 09:30 PM",
+    "status": "available",
+    "bookingLimitPerDevotee": 5
+  },
+  {
+    "id": "prs-2",
+    "name": "Mahasankalpam Archana Seva",
+    "price": 251,
+    "availableCount": 75,
+    "description": "Personalized gotra-nama archana with consecrated coconut and Panchamrutham bottle.",
+    "unit": "sevas",
+    "pickupCounter": "Sanctum Archana Counter",
+    "pickupTiming": "06:30 AM - 12:00 PM",
+    "status": "available",
+    "bookingLimitPerDevotee": 2
+  },
+  {
+    "id": "prs-3",
+    "name": "Maha Annadanam Sponsor (1 Day)",
+    "price": 5116,
+    "availableCount": 2,
+    "description": "Provides holy afternoon feast for 500+ devotees with prasadam certificate and stage blessing.",
+    "unit": "slots",
+    "pickupCounter": "Annadanam Bhavan Desk",
+    "pickupTiming": "12:30 PM - 03:30 PM",
+    "status": "available",
+    "bookingLimitPerDevotee": 1
+  },
+  {
+    "id": "prs-4",
+    "name": "Maha Laddu Prasadam (500g)",
+    "price": 101,
+    "availableCount": 210,
+    "description": "Tirupati-style boondi laddu blessed at Lord Vighneshwara feet.",
+    "unit": "packets",
+    "pickupCounter": "Counter #02 (Main Gate)",
+    "pickupTiming": "08:00 AM - 10:00 PM",
+    "status": "available",
+    "bookingLimitPerDevotee": 10
+  }
+]

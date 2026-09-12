@@ -16,16 +16,13 @@ import {
   Maximize2,
 } from 'lucide-react';
 import {
-  GALLERY_MOMENTS,
-  HISTORICAL_VAULT,
   SPONSORS,
-  ACHIEVEMENTS_DATA,
 } from '../data/festivalData';
 import { useFestival } from '../context/FestivalContext';
 import { DonationModal } from '../components/DonationModal';
 
 export const GalleryPage: React.FC = () => {
-  const { galleryItems, playTempleBell } = useFestival();
+  const { galleryData, playTempleBell } = useFestival();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedVaultYear, setSelectedVaultYear] = useState<number | null>(null);
   const [lightboxData, setLightboxData] = useState<{
@@ -35,6 +32,10 @@ export const GalleryPage: React.FC = () => {
     award?: string;
   } | null>(null);
   const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
+
+  const achievementsList = galleryData?.achievements || [];
+  const galleryItemsList = galleryData?.moments || [];
+  const vaultList = galleryData?.vault || [];
 
   const categories = [
     { id: 'all', label: 'All Sacred Moments' },
@@ -48,12 +49,12 @@ export const GalleryPage: React.FC = () => {
 
   const filteredGallery =
     selectedCategory === 'all'
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === selectedCategory);
+      ? galleryItemsList
+      : galleryItemsList.filter((item) => item.category === selectedCategory);
 
   const filteredVault = selectedVaultYear
-    ? HISTORICAL_VAULT.filter((v) => v.year === selectedVaultYear)
-    : HISTORICAL_VAULT;
+    ? vaultList.filter((v) => v.year === selectedVaultYear)
+    : vaultList;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16 text-[#FFFDF5]">
@@ -130,14 +131,14 @@ export const GalleryPage: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="px-3.5 py-1.5 rounded-xl bg-amber-400 text-black font-heading font-black text-xs shadow-lg flex items-center gap-1.5">
               <Star className="w-3.5 h-3.5 fill-black" />
-              4 Golden Honors
+              {achievementsList.length} Honors
             </span>
           </div>
         </div>
 
         {/* 4 Achievements Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 relative z-10">
-          {ACHIEVEMENTS_DATA.map((ach, idx) => (
+          {achievementsList.map((ach) => (
             <div
               key={ach.id}
               className="rounded-2xl bg-[#180a0a]/90 border border-amber-500/40 overflow-hidden shadow-2xl hover:border-amber-400 transition-all duration-300 group flex flex-col justify-between"
@@ -316,7 +317,7 @@ export const GalleryPage: React.FC = () => {
                   </span>
                   <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-md border border-amber-500/20">
                     <Eye className="w-3 h-3 text-amber-400" />
-                    {item.views.toLocaleString()}
+                    {(item.views || 0).toLocaleString()}
                   </span>
                 </div>
               </div>
@@ -359,7 +360,7 @@ export const GalleryPage: React.FC = () => {
             >
               All Years
             </button>
-            {HISTORICAL_VAULT.map((v) => (
+            {vaultList.map((v) => (
               <button
                 key={v.year}
                 onClick={() => setSelectedVaultYear(v.year)}

@@ -11,19 +11,24 @@ import {
   Users,
   Bell,
 } from 'lucide-react';
-import { INITIAL_DAYS_ITINERARY, INITIAL_COMPETITIONS } from '../data/festivalData';
 import { useFestival } from '../context/FestivalContext';
 import { RegistrationModal } from '../components/RegistrationModal';
 
 export const EventsPage: React.FC = () => {
-  const { playTempleBell, playAartiAlert } = useFestival();
+  const { events, competitions, playTempleBell, playAartiAlert } = useFestival();
   const [activeDayNumber, setActiveDayNumber] = useState(1);
   const [selectedCompForReg, setSelectedCompForReg] = useState<string | null>(null);
   const [calendarSubscribed, setCalendarSubscribed] = useState(false);
 
   const activeDay =
-    INITIAL_DAYS_ITINERARY.find((d) => d.dayNumber === activeDayNumber) ||
-    INITIAL_DAYS_ITINERARY[0];
+    (events || []).find((d) => d.dayNumber === activeDayNumber) ||
+    events?.[0] || {
+      dayNumber: 1,
+      date: '07 September 2026',
+      title: 'Sri Vinayaka Chavithi',
+      subtitle: 'Maha Ganapathi Sthapana',
+      rituals: [],
+    };
 
   const handleCalendarAdd = (ritualTitle: string, date: string, time: string) => {
     playTempleBell();
@@ -109,7 +114,7 @@ export const EventsPage: React.FC = () => {
 
         {/* Day Horizontal Scroller Tabs */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
-          {INITIAL_DAYS_ITINERARY.map((day) => {
+          {events.map((day) => {
             const isSelected = activeDayNumber === day.dayNumber;
             return (
               <button
@@ -280,7 +285,7 @@ export const EventsPage: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {INITIAL_COMPETITIONS.map((comp) => (
+          {competitions.map((comp) => (
             <div
               key={comp.id}
               className="rounded-2xl temple-glass p-6 border border-amber-500/30 flex flex-col justify-between gap-6 shadow-xl hover:border-amber-400/50 transition group"

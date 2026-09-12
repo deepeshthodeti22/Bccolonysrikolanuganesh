@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --crimson: #800000;
+    --marigold: #FFBF00;
+    --gold: #D4AF37;
+    --obsidian: #121212;
+    --ivory: #FFFDF5;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0d0808;
+    color: #FFFDF5;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-decorative {
+    font-family: 'Cinzel Decorative', serif;
+  }
+
+  .font-marcellus {
+    font-family: 'Marcellus', serif;
+  }
+
+  .font-rozha {
+    font-family: 'Rozha One', serif;
+  }
+}
+
+/* Custom Temple Aesthetic Utilities */
+.temple-glass {
+  background: rgba(22, 14, 14, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(212, 175, 55, 0.08);
+}
+
+.temple-glass-crimson {
+  background: linear-gradient(135deg, rgba(128, 0, 0, 0.65) 0%, rgba(42, 6, 6, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 191, 0, 0.3);
+  box-shadow: 0 15px 35px -5px rgba(128, 0, 0, 0.4);
+}
+
+.temple-gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF5C0 0%, #FFBF00 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.crimson-gradient-bg {
+  background: linear-gradient(180deg, #800000 0%, #500000 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #120b0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFBF00;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

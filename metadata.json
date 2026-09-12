@@ -1,0 +1,6 @@
+{
+  "name": "Sri Vinayaka Mahotsavam - Ganesh Festival Committee System",
+  "description": "High-end Indian temple portal and festival committee operations system featuring live darshan, real-time news ticker, ritual matrix, sports scoreboard, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
